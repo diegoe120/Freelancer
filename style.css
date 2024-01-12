@@ -20,6 +20,12 @@ html {
     box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -27,11 +33,29 @@ body {
     font-family: 'Krub', sans-serif;
 }
 
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
 /* Header */
 
 .titulo {
-    text-align: center;
-    font-size: 3.8rem;
+
+
     font-family: Krub, Courier, monospace;
 
     span {
@@ -77,8 +101,35 @@ body {
     }
 }
 
+/* Hero */
+
 .hero {
     background-image: url(./assets/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 450px;
+    position: relative;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+
+    /* esquema basico para aliniar en forma vertical y horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2,
+    p {
+        color: var(--blanco);
+    }
+}
+
+.ubicacion {
+    display: flex;
+    justify-content: center;
 }
